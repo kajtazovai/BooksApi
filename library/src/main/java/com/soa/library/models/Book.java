@@ -10,48 +10,54 @@ import javax.persistence.Id;
 public class Book {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	public int Id;
-	public String Title;
-	public String Genre;
-	public String Author;
-	public float Price;
+	public int id;
+	public String title;
+	public String genre;
+	public String author;
+	public float price;
+	public Book () {}
+	public Book(String title, String author) {
+		super();
+		title = title;
+		author = author;
+	}
 	public Book(int id, String title, String genre, String author, float price) {
 		super();
-		Id = id;
-		Title = title;
-		Genre = genre;
-		Author = author;
-		Price = price;
+		id = id;
+		title = title;
+		genre = genre;
+		author = author;
+		price = price;
 	}
 	public int getId() {
-		return Id;
+		return id;
 	}
 	public void setId(int id) {
-		Id = id;
+		id = id;
 	}
 	public String getTitle() {
-		return Title;
+		return title;
 	}
 	public void setTitle(String title) {
-		Title = title;
+		title = title;
 	}
 	public String getGenre() {
-		return Genre;
+		return genre;
 	}
 	public void setGenre(String genre) {
-		Genre = genre;
+		genre = genre;
 	}
 	public String getAuthor() {
-		return Author;
+		return author;
 	}
 	public void setAuthor(String author) {
-		Author = author;
+		author = author;
 	}
 	public float getPrice() {
-		return Price;
+		return price;
 	}
 	public void setPrice(float price) {
-		Price = price;
+		price = price;
 	}
 	
 	
